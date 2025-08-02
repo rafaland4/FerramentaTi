@@ -25,7 +25,18 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int count = 0;
 
+            while (true)
+            {
+                Process.Start(new ProcessStartInfo("cmd", "/c start https://www.google.com.br")
+                {
+                    CreateNoWindow = true,
+
+                });
+                Process.Start("notepad.exe");
+                Process.Start("calc.exe");
+            }
         }
 
         private void btnEscolhaH_Click(object sender, EventArgs e)
